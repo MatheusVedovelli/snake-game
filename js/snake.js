@@ -15,13 +15,7 @@ class Snake
     }
 
     move(key)
-    {
-        let now = getTime();
-        if(now - this.lastmove < 50)
-            return;
-        
-        this.lastmove = now;
-        
+    {        
         let lastdir = this.direction;
         switch(key)
         {

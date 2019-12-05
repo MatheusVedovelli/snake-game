@@ -18,6 +18,14 @@ class Unit
 
     move(direction, hx, hy)
     {
+        if(this.moveq.length)
+        {
+            if(this.moveq[this.moveq.length-1].hx == hx && this.moveq[this.moveq.length-1].hy == hy)
+            {
+                this.moveq[this.moveq.length-1].direction = direction;
+                return;
+            }
+        }
         console.log(direction);
         this.moveq.push({
             direction: direction,
